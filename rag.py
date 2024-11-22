@@ -55,7 +55,7 @@ embeddings=PineconeEmbeddings(
 #vector store using Pinecone
 from langchain_pinecone import PineconeVectorStore
 index_name='directory'
-db=PineconeVectorStore(text,embeddings, index_name=index_name)
+deb=PineconeVectorStore(text,embeddings, index_name=index_name)
 
 
 
@@ -115,7 +115,7 @@ qa=RetrievalQA.from_chain_type(
 
 #%%
 #test
-query=' What is '
+query=' What is diaspora directory '
 
 res1=qa.invoke(query).get('result')
 print(f"the rag answer: {res1}")
